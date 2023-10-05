@@ -1,17 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Onest&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: "Onest", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .header {
-  font-family: "Londrina Solid", cursive;
   font-size: 46pt;
   @apply text-slate-900;
   line-height: 110%;
@@ -31,4 +28,12 @@ body {
     #5ca96b 64%,
     #614533 86%
   );
+}
+
+.gradient-text-2 {
+  background-image: linear-gradient(135deg, #be4bdb 5%, #f783ac 95%);
+}
+
+.gradient-text-3 {
+  background-image: linear-gradient(135deg, #7950f2 5%, #4dabf7 95%);
 }
