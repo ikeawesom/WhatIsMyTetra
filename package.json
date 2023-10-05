@@ -10,6 +10,7 @@
     "turbo": "next dev --turbo"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.38.0",
     "framer-motion": "^10.16.4",
     "next": "latest",
     "react": "latest",
