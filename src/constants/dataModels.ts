@@ -19,32 +19,35 @@ export const ELEMENTS_DATA = {
   },
 };
 
-export type TIPS_SPEAK = {
-  earth: "Speak with precision, get to the point swiftly, and make eye contact.";
-  air: "Speak deliberately and with clarity. Approach conversations logically and follow a sequential flow.";
-  water: "Speak gently and at a relaxed pace. Express warmth through your eyes and convey genuine concern.";
-  fire: "Talk briskly, wear a smile, and infuse energy into your words. Vary your tone to keep things lively and engaging.";
+export const TIPS_SPEAK = {
+  earth:
+    "Speak with precision, get to the point swiftly, and make eye contact.",
+  air: "Speak deliberately and with clarity. Approach conversations logically and follow a sequential flow.",
+  water:
+    "Speak gently and at a relaxed pace. Express warmth through your eyes and convey genuine concern.",
+  fire: "Talk briskly, wear a smile, and infuse energy into your words. Vary your tone to keep things lively and engaging.",
 };
 
-export type TIPS_CORRECT = {
-  earth: "Clarify the issue and empower them to make the correction.";
-  air: "Clearly state the intended outcome and encourage them to propose solutions.";
-  water: "Show appreciation for their effort. Provide guidance on what to do and explain the reasons behind it.";
-  fire: "Share the importance of the desired outcome and invite them to propose an improved result.";
+export const TIPS_CORRECT = {
+  earth: "Clarify the issue and empower them to make the correction.",
+  air: "Clearly state the intended outcome and encourage them to propose solutions.",
+  water:
+    "Show appreciation for their effort. Provide guidance on what to do and explain the reasons behind it.",
+  fire: "Share the importance of the desired outcome and invite them to propose an improved result.",
 };
 
-export type TIPS_ADVISE = {
-  earth: "Outline your goals clearly in bullet points for a focused approach.";
-  air: "Understand and describe the broader significance of how it contributes to the overall picture.";
-  water: "Illustrate the significance and essence behind the advice.";
-  fire: "Present alternatives and maintain an optimistic tone to keep the conversation constructive.";
+export const TIPS_ADVISE = {
+  earth: "Outline your goals clearly in bullet points for a focused approach.",
+  air: "Understand and describe the broader significance of how it contributes to the overall picture.",
+  water: "Illustrate the significance and essence behind the advice.",
+  fire: "Present alternatives and maintain an optimistic tone to keep the conversation constructive.",
 };
 
-export type TIPS_MOTIVATE = {
-  earth: "Recognize the difficulty ahead.";
-  air: "Highlight the significance and relevance of the plan.";
-  water: "Show confidence and trust in their abilities.";
-  fire: "Infuse enthusiasm and keep the focus on the future.";
+export const TIPS_MOTIVATE = {
+  earth: "Recognize the difficulty ahead.",
+  air: "Highlight the significance and relevance of the plan.",
+  water: "Show confidence and trust in their abilities.",
+  fire: "Infuse enthusiasm and keep the focus on the future.",
 };
 
 export const WORDS = [
