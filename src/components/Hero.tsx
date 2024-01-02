@@ -13,7 +13,7 @@ export default function Hero() {
       animateProps={{ transit, toggletransit }}
       className="items-center justify-center text-center opacity-0"
     >
-      <h1 className="sm:text-6xl text-4xl text-slate-900">
+      <h1 className="header">
         Discover your{" "}
         <span className="text-clip gradient-text-1">inner elements</span> and
         connect better with everyone.
