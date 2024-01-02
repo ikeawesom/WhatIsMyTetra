@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Image from "next/image";
 import { TelegramShareButton, WhatsappShareButton } from "react-share";
 import { MaxType } from "./ResultsScreen";
 function handleText(elements: string[]) {
@@ -28,9 +29,9 @@ Check out yours here: https://whatismytetra.vercel.app/ !`;
       <h1 className="font-medium mt-10 text-lg">Let others know!</h1>
       <div className="flex items-center justify-center gap-4">
         <WhatsappShareButton url={text}>
-          <img
+          <Image
             src="whatsapp.svg"
-            alt=""
+            alt="Share to WhatsApp"
             width={50}
             height={50}
             className="hover:opacity-70 duration-150"
@@ -40,7 +41,12 @@ Check out yours here: https://whatismytetra.vercel.app/ !`;
           url={text}
           className="hover:opacity-70 duration-150"
         >
-          <img src="telegram.svg" alt="" width={40} height={40} />
+          <Image
+            src="telegram.svg"
+            alt="Share to Telegram"
+            width={40}
+            height={40}
+          />
         </TelegramShareButton>
       </div>
     </>
