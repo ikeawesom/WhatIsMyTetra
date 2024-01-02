@@ -1,22 +1,50 @@
 import { wordType } from "./types";
 
 export const ELEMENTS_DATA = {
-  Earth: {
+  earth: {
     word: "firm",
-    desc: "Earthy folks are like the sturdy oaks of the personality forest. They strut with confidence, tackling goals and control like it's their favorite sport. Risky decisions? No sweat. Quick, possibly hair-raising choices are their forte.",
+    desc: "Earth Elements confidently tackle their journey with boldness, prioritizing goals and triumph. They make swift, daring decisions with ease.",
   },
-  Air: {
+  air: {
     word: "clear",
-    desc: "Airheads? Not a chance. Air personalities are the Sherlock Holmes of the gang. They're all about the brains. Logical solutions are their playground, and they plan things out like it's a top-secret mission. Accuracy and quality? They're the best at it.",
+    desc: "No airheads; Air personalities are like Sherlock Holmes, sharp and logical. They turn tasks into exciting missions, nailing accuracy and top-quality results.",
   },
-  Water: {
+  water: {
     word: "calm",
-    desc: "Ah, the water wizards. These folks are the glue holding families and teams together. They're the emotional rock stars, with loyalty that could put a dog's devotion to shame. Steadfast like a tortoise, patient as a saint, and with a desire for harmony that would make even a zen master jealous.",
+    desc: "Water wizards: the emotional glue for families and teams. They're loyal rock stars, as steadfast as a tortoise, patient as a saint, and their harmony-seeking vibe would make a zen master jealous.",
   },
-  Fire: {
+  fire: {
     word: "bright",
-    desc: "Firecrackers, anyone? Fire personalities light up life's party. They're all about the sunny side, exploring possibilities with the zeal of a kid in a candy store. They're the rainbow in your storm, the variety seekers, and they've got more fun up their sleeve than a magician at a birthday bash.",
+    desc: "Fire personalities light up life's party with the enthusiasm of a kid in a candy store. They bring a rainbow to your storm, always seeking fun and variety like a magician at a birthday bash.",
   },
+};
+
+export type TIPS_SPEAK = {
+  earth: "Speak with precision, get to the point swiftly, and make eye contact.";
+  air: "Speak deliberately and with clarity. Approach conversations logically and follow a sequential flow.";
+  water: "Speak gently and at a relaxed pace. Express warmth through your eyes and convey genuine concern.";
+  fire: "Talk briskly, wear a smile, and infuse energy into your words. Vary your tone to keep things lively and engaging.";
+};
+
+export type TIPS_CORRECT = {
+  earth: "Clarify the issue and empower them to make the correction.";
+  air: "Clearly state the intended outcome and encourage them to propose solutions.";
+  water: "Show appreciation for their effort. Provide guidance on what to do and explain the reasons behind it.";
+  fire: "Share the importance of the desired outcome and invite them to propose an improved result.";
+};
+
+export type TIPS_ADVISE = {
+  earth: "Outline your goals clearly in bullet points for a focused approach.";
+  air: "Understand and describe the broader significance of how it contributes to the overall picture.";
+  water: "Illustrate the significance and essence behind the advice.";
+  fire: "Present alternatives and maintain an optimistic tone to keep the conversation constructive.";
+};
+
+export type TIPS_MOTIVATE = {
+  earth: "Recognize the difficulty ahead.";
+  air: "Highlight the significance and relevance of the plan.";
+  water: "Show confidence and trust in their abilities.";
+  fire: "Infuse enthusiasm and keep the focus on the future.";
 };
 
 export const WORDS = [
