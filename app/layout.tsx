@@ -16,9 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-gradient-radial to-slate-200 from-white ${inter.className}`}
+        className={`bg-gradient-radial to-slate-200 from-white ${inter.className} flex flex-col w-full items-center justify-center`}
       >
         {children}
+        <p className="text-sm text-gray-400 text-center mb-4">
+          Created by Ike Lim.
+        </p>
       </body>
     </html>
   );

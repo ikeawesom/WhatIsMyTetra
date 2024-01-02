@@ -8,7 +8,10 @@ type ScreenProps = {
 export default function DefScreen({ children, className }: ScreenProps) {
   return (
     <div
-      className={twMerge("grid place-items-center w-full h-screen", className)}
+      className={twMerge(
+        "grid place-items-center w-full min-h-[90vh]",
+        className
+      )}
     >
       {children}
     </div>
