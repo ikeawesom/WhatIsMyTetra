@@ -16,6 +16,10 @@ body {
   @apply sm:text-4xl text-xl text-slate-900;
 }
 
+.highlight {
+  box-shadow: 0 0 10px 4px #9677f348;
+}
+
 .text-clip {
   background-clip: text;
   -webkit-background-clip: text;
