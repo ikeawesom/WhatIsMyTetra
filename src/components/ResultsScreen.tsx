@@ -75,7 +75,12 @@ export default function ResultsScreen() {
                 element === "fire"
               ) {
                 return (
-                  <ElementBox element={element} big score={maxElement.score} />
+                  <ElementBox
+                    key={elementUpper}
+                    element={element}
+                    big
+                    score={maxElement.score}
+                  />
                 );
               }
             })}
@@ -105,7 +110,7 @@ export default function ResultsScreen() {
                   elementName === "Water" ||
                   elementName === "Fire")
               ) {
-                return <TipBox element={elementNameLower} />;
+                return <TipBox key={elementName} element={elementNameLower} />;
               }
             })}
           </div>
@@ -134,6 +139,7 @@ export default function ResultsScreen() {
               ) {
                 return (
                   <ElementBox
+                    key={elementName}
                     element={elementNameLower}
                     score={scores[elementName]}
                   />
