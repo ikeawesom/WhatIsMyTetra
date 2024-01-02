@@ -50,7 +50,7 @@ export function Intro() {
         className="opacity-0"
       >
         <PrimaryButton onClick={toggletransit} className="w-fit">
-          Next
+          Start
         </PrimaryButton>
       </motion.a>
     </Container>

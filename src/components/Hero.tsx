@@ -19,7 +19,7 @@ export default function Hero() {
         connect better with everyone.
       </h1>
       <PrimaryButton className="text-lg" onClick={toggletransit}>
-        Start quiz
+        Next
       </PrimaryButton>
     </Container>
   );

@@ -30,13 +30,21 @@ export default function Container({
           duration: 0.6,
           delay: delay ? delay : 0,
         }}
-        className={twMerge("max-w-3xl flex flex-col gap-y-8", className)}
+        className={twMerge(
+          "max-w-3xl flex flex-col gap-y-8 md:p-6 p-3",
+          className
+        )}
       >
         {children}
       </motion.div>
     );
   return (
-    <div className={twMerge("max-w-3xl flex flex-col gap-y-8", className)}>
+    <div
+      className={twMerge(
+        "max-w-3xl flex flex-col gap-y-8 md:p-6 p-3",
+        className
+      )}
+    >
       {children}
     </div>
   );
