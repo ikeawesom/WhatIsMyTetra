@@ -9,9 +9,11 @@ body {
 }
 
 .header {
-  font-size: 46pt;
-  @apply text-slate-900;
-  line-height: 110%;
+  @apply sm:text-6xl text-4xl text-slate-900;
+}
+
+.header2 {
+  @apply sm:text-4xl text-xl text-slate-900;
 }
 
 .text-clip {
