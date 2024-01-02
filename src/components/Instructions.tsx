@@ -12,7 +12,7 @@ export function Intro() {
     <Container>
       <div className="flex flex-col gap-4">
         <motion.h1
-          className="text-5xl font-medium opacity-0"
+          className="sm:text-6xl text-4xl text-slate-900 font-medium opacity-0"
           animate={{
             x: transit ? [0, -100] : [100, 0],
             opacity: transit ? [1, 0] : [0, 1],
