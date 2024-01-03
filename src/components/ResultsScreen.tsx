@@ -93,7 +93,7 @@ export default function ResultsScreen() {
           delay={0.2}
           className="flex-col flex items-center justify-center gap-4 mt-4 w-full"
         >
-          <h1 className="header2 font-medium">
+          <h1 className="header2 font-medium text-center">
             How to deal with other elements?
           </h1>
           <div className="flex flex-col items-center justify-center gap-4 w-full">
