@@ -16,13 +16,13 @@ type WordsProps = {
 export default function WordScreen({ words }: WordsProps) {
   const router = useRouter();
   const { transit, toggletransit } = useNextTransition({ path: "intro" });
-
-  const [count, setCount] = useState(25);
+  const [count, setCount] = useState(0);
   const { score, updateScore, wordObj1, wordObj2, handleWordChange } =
     useWordScorer(words);
 
   const handleClick = (wordObj: wordType) => {
     updateScore(wordObj);
+    setCount((count) => count + 1);
   };
 
   useEffect(() => {
@@ -30,33 +30,81 @@ export default function WordScreen({ words }: WordsProps) {
   }, []);
 
   useEffect(() => {
-    setCount((count) => count - 1);
-  }, [score]);
-
-  useEffect(() => {
-    if (count === 0) {
+    if (count === 24) {
       localStorage.setItem("results", JSON.stringify(score));
-      router.push("/results");
+      setTimeout(() => {
+        router.push("/results");
+      }, 400);
     }
   }, [count]);
 
-  if (wordObj1 && wordObj2 && count > 0)
+  const pathlength = count / 24;
+  // console.log(pathlength);
+  if (wordObj1 && wordObj2 && count <= 24)
     return (
       <>
-        <div
-          className={twMerge(
-            "absolute top-10 left-1/2 -translate-x-1/2 p-3 rounded-full text-white shadow-lg",
-            count % 2 === 0 ? "bg-design-1" : "bg-design-2"
-          )}
-        >
-          {count}
+        <div className="w-full h-[80vh] grid place-items-center absolute top-0 left-0">
+          <svg className="relative flex min-[680px]:w-[80vh] min-[680px]:h-[80vh] h-[100vw] w-[100vw] items-center justify-center transform -rotate-90 -z-10">
+            <circle
+              className="text-slate-400 max-[400px]:hidden drop-shadow-lg"
+              stroke="currentColor"
+              strokeWidth="50"
+              cx="50%"
+              cy="50%"
+              r="180"
+              fill="transparent"
+            />
+            <circle
+              cx="50%"
+              cy="50%"
+              r="180"
+              stroke="currentColor"
+              id="robin"
+              strokeDasharray={Math.round(Math.PI * (2 * 180))}
+              strokeDashoffset={
+                Math.round(Math.PI * (2 * 180)) -
+                (Math.PI * (2 * 180) * count) / 24
+              }
+              strokeLinecap="round"
+              strokeWidth="50"
+              fill="transparent"
+              className="max-[400px]:hidden text-purple-700 transition-all duration-500"
+            />
+            <circle
+              className="min-[400px]:hidden text-slate-400 drop-shadow-lg "
+              stroke="currentColor"
+              strokeWidth="20"
+              cx="50%"
+              cy="50%"
+              r="120"
+              fill="transparent"
+            />
+            <circle
+              cx="50%"
+              cy="50%"
+              r="120"
+              stroke="currentColor"
+              id="robin"
+              strokeDasharray={Math.round(Math.PI * (2 * 120))}
+              strokeDashoffset={
+                Math.round(Math.PI * (2 * 120)) -
+                (Math.PI * (2 * 120) * count) / 24
+              }
+              strokeLinecap="round"
+              strokeWidth="20"
+              fill="transparent"
+              className="opacity-40 min-[400px]:hidden text-purple-700 transition-all duration-500 drop-shadow-lg"
+            />
+          </svg>
         </div>
-        <Container animated animateProps={{ transit, toggletransit }}>
-          <div className="flex flex-col items-center justify-center gap-10">
-            <Word onClick={handleClick} text={wordObj1} design={1} />
-            <Word onClick={handleClick} text={wordObj2} design={2} />
-          </div>
-        </Container>
+        <div className="w-full h-[80vh] grid place-items-center absolute top-0 left-0">
+          <Container animated animateProps={{ transit, toggletransit }}>
+            <div className="flex flex-col items-center justify-center gap-10">
+              <Word onClick={handleClick} text={wordObj1} design={1} />
+              <Word onClick={handleClick} text={wordObj2} design={2} />
+            </div>
+          </Container>
+        </div>
       </>
     );
 }
