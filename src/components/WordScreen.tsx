@@ -18,26 +18,24 @@ export default function WordScreen({ words }: WordsProps) {
   const { transit, toggletransit } = useNextTransition({ path: "intro" });
 
   const [count, setCount] = useState(25);
-  const { updateScore, selectedWords, score } = useWordScorer();
-  const { wordObj1, wordObj2, handleWordChange } = useWordGenerator(
-    words,
-    selectedWords
-  );
-  const [curScore, setCurScore] = useState<elementScores>();
+  const { score, updateScore, wordObj1, wordObj2, handleWordChange } =
+    useWordScorer(words);
 
   const handleClick = (wordObj: wordType) => {
     updateScore(wordObj);
-    handleWordChange(selectedWords);
-    setCurScore(score);
   };
 
   useEffect(() => {
+    handleWordChange();
+  }, []);
+
+  useEffect(() => {
     setCount((count) => count - 1);
-  }, [curScore]);
+  }, [score]);
 
   useEffect(() => {
     if (count === 0) {
-      localStorage.setItem("results", JSON.stringify(curScore));
+      localStorage.setItem("results", JSON.stringify(score));
       router.push("/results");
     }
   }, [count]);
